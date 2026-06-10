@@ -1,0 +1,21 @@
+{
+  "name": "transformer",
+  "version": "1.0.0",
+  "description": "Event processing layer for supply chain blockchain",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["blockchain", "neo4j", "supply-chain", "etl"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.1",
+    "joi": "^17.13.3",
+    "neo4j-driver": "^5.25.0",
+    "ws": "^8.18.0"
+  }
+}

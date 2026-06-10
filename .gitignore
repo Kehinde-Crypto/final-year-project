@@ -1,0 +1,25 @@
+node_modules/
+.env
+.env.local
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+venv/
+env/
+
+# Hardhat
+artifacts/
+cache/
+typechain-types/
+
+# Next.js
+.next/
+out/
+
+# Neo4j Docker data
+neo4j/data/
+neo4j/logs/
+neo4j/import/
+neo4j/plugins/
