@@ -2,7 +2,7 @@
   "network": "sepolia",
   "chainId": 11155111,
   "contractName": "SupplyChain",
-  "address": "0xea23031836bf22c92d995f758749f31173c302c7",
+  "address": "0x9bd1db2bd95d551a43dd0c8d8b997e0bdb3cad49",
   "abi": [
     {
       "inputs": [],
@@ -855,6 +855,6 @@
     }
   ],
   "deployer": "0xc79c7ce57b53c0dfd075f931691015f54002a07b",
-  "deployedAt": "2026-09-03T15:20:04.775Z",
-  "blockNumber": 11627403
+  "deployedAt": "2026-09-03T15:21:51.073Z",
+  "blockNumber": 11627412
 }
