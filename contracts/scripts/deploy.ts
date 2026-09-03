@@ -32,10 +32,14 @@ async function main() {
     fs.mkdirSync(deploymentsDir, { recursive: true });
   }
   
+  // Detect network
+  const chainId = Number(await publicClient.getChainId());
+  const networkName = chainId === 11155111 ? "sepolia" : "localhost";
+
   // Save deployment info
   const deploymentInfo = {
-    network: "localhost",
-    chainId: Number(await publicClient.getChainId()),
+    network: networkName,
+    chainId,
     contractName: "SupplyChain",
     address: supplyChain.address,
     abi: artifact.abi,
@@ -44,7 +48,7 @@ async function main() {
     blockNumber: Number(await publicClient.getBlockNumber()),
   };
   
-  const outputPath = path.join(deploymentsDir, "localhost.json");
+  const outputPath = path.join(deploymentsDir, `${networkName}.json`);
   fs.writeFileSync(outputPath, JSON.stringify(deploymentInfo, null, 2));
   
   console.log("📄 Deployment info saved to:", outputPath);
@@ -53,7 +57,7 @@ async function main() {
   console.log("\n=== Deployment Summary ===");
   console.log("Contract: SupplyChain");
   console.log("Address:", supplyChain.address);
-  console.log("Network: localhost (Hardhat)");
+  console.log("Network:", networkName, `(chainId: ${chainId})`);
   console.log("Deployer:", deployer.account.address);
   console.log("========================\n");
   

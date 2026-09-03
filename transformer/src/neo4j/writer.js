@@ -77,7 +77,7 @@ export class GraphWriter {
     if (replace) {
       // Delete existing relationship of same type, then create new one
       query = `
-        MATCH (from:${from.label} {id: $fromId})-[old:${type}]->(to:any)
+        MATCH (from:${from.label} {id: $fromId})-[old:${type}]->(old_to)
         DELETE old
         WITH from
         MATCH (to:${to.label} {id: $toId})
